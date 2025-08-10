@@ -1,0 +1,58 @@
+{
+    "manifest_version": 3,
+    "name": "OpenDyslexic Page Reader",
+    "version": "0.1.0",
+    "description": "One-click readability: switch page text to OpenDyslexic font.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "tabs"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "commands": {
+      "toggle-font": {
+        "suggested_key": {
+          "default": "Alt+D"
+        },
+        "description": "Toggle OpenDyslexic font on the current page"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "bridge.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      },
+      {
+        "resources": [
+          "fonts/OpenDyslexic-Regular.woff2",
+          "fonts/OpenDyslexic-Bold.woff2",
+          "fonts/OpenDyslexic-Italic.woff2"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+  }
