@@ -1,6 +1,6 @@
-# OpenDyslexic Page Reader - Architecture Overview
+# OpenDyslexia Chrome Extension - Architecture Overview
 
-This document serves as the single source of truth for the **OpenDyslexic Page Reader** Chrome extension. It provides a comprehensive overview of the project's architecture, file structure, data flow, and development conventions. The goal is to enable any developer or AI agent to understand the codebase and make targeted changes efficiently.
+This document serves as the single source of truth for the **OpenDyslexia Chrome Extension**. It provides a comprehensive overview of the project's architecture, file structure, data flow, and development conventions. The goal is to enable any developer or AI agent to understand the codebase and make targeted changes efficiently.
 
 ## 1. High-Level Architecture
 
@@ -34,7 +34,7 @@ The extension follows a standard **Manifest V3** architecture, separating respon
 
 This section details every file and directory in the repository, explaining its purpose, key exports, dependencies, and role in the project.
 
-### Root Directory: `open-dyslexic-reader/`
+### Root Directory: `OpenDyslexia_Chrome_Extension/`
 
 -   **`architecture.md`**: **This file.** The single source of truth for the project's architecture, design patterns, and file structure.
 -   **`eslint.config.js`**: Configures ESLint for static code analysis. It integrates TypeScript and React plugins to enforce coding standards and prevent common errors.
